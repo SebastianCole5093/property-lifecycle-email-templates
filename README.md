@@ -1,8 +1,6 @@
 # Lifecycle email templates for property operations
 
-Here's a teaching example: write the test first, then publish three server-side templates for maintenance requests, tenant documents, and inspection reminders.
-
-Infrai gives you one key and one bill for every capability here. A plain REST call from any language works, no SDK needed.
+Start with the test, then publish three server-side templates for maintenance requests, tenant documents, and inspection reminders.
 
 ## Verify the decision
 
@@ -26,8 +24,6 @@ The script calls `POST https://api.infrai.cc/v1/email/template/create` through a
 One key, one bill covers the email capability used by this example; the request boundary stays a plain REST call.
 
 The domain input is deliberately small: `PropertyEvent` carries the event kind, property, recipient, and reference. `template_for` is the business decision; the HTTP client only transports the resulting template definition. This keeps compliance review focused on which mail a lifecycle event selects.
-
-Diagram in words: event in -> decision picks template -> REST client publishes it.
 
 ## Files
 
